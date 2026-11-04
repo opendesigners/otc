@@ -4,12 +4,13 @@
 //
 // Usage: pnpm content:check
 
-import { findDraftLinks, loadAllContent } from "./lib/content.ts";
+import { findDraftLinks, loadAllContent, loadPhotos } from "./lib/content.ts";
 
 function main(): number {
   let docs;
   try {
     docs = loadAllContent();
+    loadPhotos();
   } catch (error) {
     console.error(`✗ ${(error as Error).message}`);
     return 1;

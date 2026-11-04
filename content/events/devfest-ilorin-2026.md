@@ -10,6 +10,8 @@ endDate: 2026-11-07
 venue:
   name: Ilorin Innovation Hub
   address: 9a Ahmadu Bello Way, Ilorin 240212, Kwara
+url: https://devfestilorin.com
+registrationUrl: https://gdg.community.dev/events/details/google-gdg-ilorin-presents-devfest-ilorin-2026/
 schedule:
   - date: 2026-11-06
     title: Workshops
@@ -17,36 +19,77 @@ schedule:
   - date: 2026-11-07
     title: Conference
     detail: The main DevFest Ilorin conference day.
+# Tiers and order as listed on devfestilorin.com (confirmed 2026-11-04).
 sponsors:
-  - name: Qorelly
+  - name: Blaaiz
     tier: Headline sponsor
+    logo: blaaiz.svg
+  - name: Qorelly
+    tier: Diamond sponsor
+    logo: qorelly.svg
+  - name: MalHub
+    tier: Sponsor
+    logo: malhub.svg
+  - name: Verafy
+    tier: Sponsor
+    logo: verafy.svg
+  - name: Ilorin Innovation Hub
+    tier: Sponsor
+    logo: ilorin-innovation-hub.webp
+  - name: SqaleUp
+    tier: Sponsor
+    logo: sqaleup.svg
+  - name: Celerlinks
+    tier: Sponsor
+    logo: celerlinks.webp
+  - name: Fuskar
+    tier: Partner
+    logo: fuskar.svg
+  - name: Exploit Forge Academy
+    tier: Partner
+    logo: exploit-forge-academy.webp
+  - name: Pixel Pioneer
+    tier: Partner
+    logo: pixel-pioneer.svg
+  - name: StartupList Africa
+    tier: Partner
+    logo: startuplist-africa.svg
+  - name: Unovia
+    tier: Partner
+    logo: unovia.svg
+  - name: CampusX
+    tier: Partner
+    logo: campusx.webp
+  - name: GDSC University of Ilorin
+    tier: Community partner
+  - name: GDSC Kwara State University
+    tier: Community partner
+  - name: GDSC Kwara State Polytechnic
+    tier: Community partner
+  - name: GDSC Al-Hikmah University
+    tier: Community partner
+  - name: Open Designers
+    tier: Community partner
+    logo: open-designers.svg
+  - name: Kwarabuild
+    tier: Community partner
+    logo: kwarabuild.svg
 expectedAttendance: Around 1,000 expected each day
 ---
 
 ## About DevFest Ilorin
 
-DevFest Ilorin is the largest tech conference in North Central Nigeria, organised every year by GDG Ilorin, one of the three communities under Open Tech Communities Foundation (OTCF). It has drawn 2,500+ attendees across past editions.
+DevFest Ilorin is the largest tech conference in North Central Nigeria, organised every year by GDG Ilorin, one of the three communities under Open Tech Communities Foundation (OTCF). It has drawn {{devfestAttendees}} attendees across past editions.
 
 ## The 2026 edition
 
-DevFest Ilorin 2026 takes place over two days at Ilorin Innovation Hub, 9a Ahmadu Bello Way, Ilorin 240212, Kwara.
+DevFest Ilorin 2026 takes place over two days at Ilorin Innovation Hub: hands-on workshops on Friday 6 November, then the main conference on Saturday 7 November. Around 1,000 attendees are expected each day. Blaaiz is the headline sponsor and Qorelly is the Diamond sponsor.
 
-- **Friday 6 November 2026 — Workshops.** Hands-on sessions run across three halls: the Balogun Ajikobi, Balogun Gambari and Balogun Fulani rooms.
-- **Saturday 7 November 2026 — Conference.** The main conference day.
-
-Around 1,000 attendees are expected each day.
-
-## Sponsors
-
-Qorelly is the headline sponsor of DevFest Ilorin 2026.
+Tickets are on the [GDG community platform](https://gdg.community.dev/events/details/google-gdg-ilorin-presents-devfest-ilorin-2026/), and the event website is [devfestilorin.com](https://devfestilorin.com).
 
 ## Recordings
 
 Talk recordings are published on the GDG Ilorin YouTube channel after the event.
-
-## Contact
-
-Questions about DevFest Ilorin go to GDG Ilorin at gdgilorincmty@gmail.com.
 
 ## Previous edition
 

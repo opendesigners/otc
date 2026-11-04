@@ -28,7 +28,7 @@ Three: Open Designers (an open-source design initiative and community), Open Dev
 
 ## Where is GDG Ilorin based?
 
-In Ilorin, Kwara State, Nigeria. GDG Ilorin has {{gdgIlorinMembers}} members.
+In Ilorin, Kwara State, Nigeria. GDG Ilorin has {{gdgIlorinMembers}} members. See /communities/gdg-ilorin.
 
 ## How do I join GDG Ilorin?
 
@@ -44,11 +44,15 @@ Email gdgilorincmty@gmail.com.
 
 ## How big is DevFest Ilorin?
 
-DevFest Ilorin is the largest tech conference in North Central Nigeria, with 2,500+ attendees across past editions. Around 1,000 attendees are expected on each day of the 2026 edition.
+DevFest Ilorin is the largest tech conference in North Central Nigeria, with {{devfestAttendees}} attendees across past editions. Around 1,000 attendees are expected on each day of the 2026 edition.
 
 ## Who sponsors DevFest Ilorin 2026?
 
-Qorelly is the headline sponsor of DevFest Ilorin 2026.
+Blaaiz is the headline sponsor and Qorelly is the Diamond sponsor. The sponsors are MalHub, Verafy, Ilorin Innovation Hub, SqaleUp and Celerlinks; the partners are Fuskar, Exploit Forge Academy, Pixel Pioneer, StartupList Africa, Unovia and CampusX. See /events/devfest-ilorin-2026.
+
+## How do I get a ticket for DevFest Ilorin 2026?
+
+Register on the [GDG community platform](https://gdg.community.dev/events/details/google-gdg-ilorin-presents-devfest-ilorin-2026/). The event website is [devfestilorin.com](https://devfestilorin.com).
 
 ## Where can I watch DevFest and GDG Ilorin talks?
 

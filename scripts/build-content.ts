@@ -10,7 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { ContentBundle } from "../src/content/schema.ts";
-import { loadAllContent } from "./lib/content.ts";
+import { loadAllContent, loadPhotos } from "./lib/content.ts";
 import { loadLocalEnv } from "./lib/env.ts";
 
 const OUT_DIR = path.resolve(import.meta.dirname, "../src/generated");
@@ -22,11 +22,26 @@ import data from "./content.json";
 export const bundle = data as ContentBundle;
 `;
 
+// The order the brief introduces them in; anything new goes after.
+const COMMUNITY_ORDER = ["open-designers", "open-devs", "gdg-ilorin"];
+
 export function buildContent({ drafts }: { drafts: boolean }): ContentBundle {
   const all = loadAllContent();
+  const visible = drafts ? all : all.filter((doc) => doc.publish);
+  const rank = (slug: string) => (COMMUNITY_ORDER.indexOf(slug) + 1 || 99);
   const bundle: ContentBundle = {
     includesDrafts: drafts,
-    docs: drafts ? all : all.filter((doc) => doc.publish),
+    docs: visible,
+    communities: all
+      .filter((doc) => doc.kind === "community")
+      .sort((a, b) => rank(a.slug) - rank(b.slug))
+      .map(({ slug, title, tagline, route }) => ({
+        slug,
+        title,
+        tagline,
+        route: visible.some((d) => d.route === route) ? route : undefined,
+      })),
+    photos: loadPhotos(),
   };
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, "content.json"), `${JSON.stringify(bundle, null, 2)}\n`);

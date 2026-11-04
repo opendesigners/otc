@@ -53,7 +53,9 @@ pnpm content:check
 pnpm build
 ```
 
-Output: static site in `build/client/`.
+Output: static site in `build/client/` — one HTML file per page (`about.html`, `events/devfest-ilorin-2026.html`, …), `404.html`, `sitemap.xml` and `robots.txt`. Set `SITE_URL` and `OTCF_CONTACT_EMAIL` for real builds; the build warns if they're missing.
+
+Event pages are date-aware: they read as "upcoming" before an event, "happening now" during it and "recap" after its end date, using a tiny inline script — no rebuild needed when an event ends.
 
 ## Deploy (Cloudflare)
 
@@ -96,6 +98,25 @@ To run the API locally on the Workers runtime instead of Node, put secrets in `.
 pnpm api:dev
 ```
 
+### Rate limiting on Cloudflare (don't skip at deploy time)
+
+`/api/ask` limits how many questions each IP can send. On Node (dev and VPS) that limit lives in memory, which is fine for a single process. **On Workers, in-memory limits don't hold** — requests are spread across many short-lived instances — so the Worker uses Cloudflare's built-in Rate Limiting binding instead. Without it, the API falls back to the in-memory limiter, which is effectively no limit in production.
+
+1. In `wrangler.jsonc`, uncomment the `ratelimits` block. It declares a binding named `ASK_LIMITER`:
+
+   ```jsonc
+   "ratelimits": [
+     { "name": "ASK_LIMITER", "namespace_id": "1001", "simple": { "limit": 10, "period": 60 } }
+   ]
+   ```
+
+   - `limit` / `period`: requests allowed per key per window. `period` must be `10` or `60` (seconds).
+   - `namespace_id`: any positive integer string, unique among rate limiters in your Cloudflare account.
+2. Deploy (`pnpm api:deploy`). The Worker calls `env.ASK_LIMITER.limit({ key: <client IP> })` per request and returns `429` when it's exceeded. Counts live in Cloudflare and expire with the window — matching what `/privacy` says.
+3. Check it: send more than `limit` questions within a minute from one IP and confirm the API answers `429`.
+
+If you change the numbers, keep `/privacy` accurate (it says counts expire within minutes).
+
 ### Alternative: a single VPS
 
 One Node process serves `build/client` and the API together. Behind Caddy:
@@ -129,3 +150,7 @@ src/                 the site (React Router app directory)
   routes/            one file per page
 public/brand/        logo marks (placeholders until final SVGs land)
 ```
+
+## Credits
+
+Icons: [Solar](https://www.figma.com/community/file/1166831539721848736) by 480 Design, licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Credited in the site footer.
