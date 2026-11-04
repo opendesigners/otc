@@ -1,0 +1,12 @@
+// Cloudflare Worker for the API only. The site itself is static files on
+// Cloudflare Pages (build/client). See README → Deploy.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "otcf-api",
+  "main": "server/worker.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // Serve the API on the site's own domain so requests are same-origin:
+  // "routes": [{ "pattern": "example.org/api/*", "zone_name": "example.org" }],
+  // Secrets: `wrangler secret put ANTHROPIC_API_KEY`. Local dev reads .dev.vars.
+}

@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/*
+ * Provisional tokens. Final serif + palette are chosen in Phase 5 (two options
+ * proposed before applying). Warm neutrals, one accent, light/dark by system.
+ */
+:root {
+  --bg: #faf8f4;
+  --surface: #f2efe8;
+  --fg: #1d1b18;
+  --muted: #5f5a52;
+  --line: #e2ddd3;
+  --accent: #9a4a1c;
+  --accent-fg: #ffffff;
+  --focus: #9a4a1c;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161513;
+    --surface: #201e1b;
+    --fg: #ece8e1;
+    --muted: #a8a197;
+    --line: #34312c;
+    --accent: #e08a55;
+    --accent-fg: #161513;
+    --focus: #e08a55;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: ui-serif, Georgia, "Times New Roman", serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
