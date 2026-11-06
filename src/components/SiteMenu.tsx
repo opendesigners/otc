@@ -20,7 +20,7 @@ export function SiteMenu() {
 
   return (
     <div id={MENU_ID} popover="auto" className="site-menu" aria-label="Site menu">
-      <div className="mx-auto flex min-h-full max-w-[90rem] flex-col">
+      <div className="flex min-h-full flex-col">
         <div className="flex items-center justify-between gap-4 px-5 py-5 sm:px-8 sm:py-7">
           <Logo />
           <button

@@ -524,6 +524,53 @@ body {
   }
 }
 
+/* -- Home: the floating ask bar docks once the hero prompt leaves. The hero
+   prompt names a view timeline; the bar (outside <main>) reaches it through
+   timeline-scope on <body>. While the prompt is on screen the bar is hidden
+   (so it can't be focused or clicked); as the prompt scrolls off the top the
+   bar fades in — rising into place when motion is allowed — and stays. Without
+   scroll timelines the bar is simply always there, as on inner pages. -- */
+@supports (animation-timeline: view()) and (timeline-scope: none) {
+  body {
+    timeline-scope: --hero-prompt;
+  }
+  .hero-prompt {
+    view-timeline-name: --hero-prompt;
+  }
+  .ask-dock {
+    animation: ask-dock-fade linear both;
+    animation-timeline: --hero-prompt;
+    animation-range: exit 0% exit 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .ask-dock {
+      animation-name: ask-dock;
+    }
+  }
+}
+@keyframes ask-dock-fade {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes ask-dock {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+
 /* FAQ answers slide open (browsers that can animate to height:auto). */
 @supports (interpolate-size: allow-keywords) and selector(::details-content) {
   @media (prefers-reduced-motion: no-preference) {

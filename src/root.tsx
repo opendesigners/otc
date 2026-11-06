@@ -25,9 +25,10 @@ import "./app.css";
  * - hydrate: load client JS. Pages are static HTML with zero JS by default;
  *   only home and /ask should opt in (PromptBox, CommunityCycler, AnswerStream).
  * - ownHeader: the route draws SiteHeader itself (home puts it inside the hero panel).
- * - askBar: false hides the floating "Ask anything…" pill (home has its own prompt).
+ * - askBar: the floating "Ask anything…" pill. Shown by default; false hides it;
+ *   "dock" keeps it hidden until the page's `.hero-prompt` scrolls away (home).
  */
-export type RouteHandle = { hydrate?: boolean; ownHeader?: boolean; askBar?: boolean };
+export type RouteHandle = { hydrate?: boolean; ownHeader?: boolean; askBar?: boolean | "dock" };
 
 export function loader(): { org: FooterData } {
   const { title, registration } = getOrg();
@@ -66,7 +67,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     framework?.isSpaMode ||
     handles.some((h) => h.hydrate);
   const ownHeader = handles.some((h) => h.ownHeader);
-  const askBar = !handles.some((h) => h.askBar === false);
+  const askBar = handles.findLast((h) => h.askBar !== undefined)?.askBar ?? true;
 
   return (
     <html lang="en">
@@ -86,7 +87,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           Skip to content
         </a>
         {!ownHeader && (
-          <div className="mx-auto w-full max-w-[90rem]">
+          <div className="w-full">
             <SiteHeader />
           </div>
         )}
@@ -94,7 +95,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           {children}
         </main>
         <SiteFooter org={rootData?.org} />
-        {askBar && <AskBar />}
+        {askBar && <AskBar dock={askBar === "dock"} />}
         <SiteMenu />
         {hydrate && (
           <>
