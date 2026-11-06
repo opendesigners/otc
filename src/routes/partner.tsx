@@ -11,7 +11,12 @@ export function loader() {
 }
 
 export const meta: Route.MetaFunction = ({ loaderData }) =>
-  pageMeta({ title: loaderData.partner.title, description: loaderData.partner.summary, path: "/partner" });
+  pageMeta({
+    title: loaderData.partner.title,
+    description: loaderData.partner.summary,
+    path: "/partner",
+    crumbs: [{ name: loaderData.partner.title, path: "/partner" }],
+  });
 
 export default function Partner({ loaderData }: Route.ComponentProps) {
   const { partner, backers, communityPartners } = loaderData;

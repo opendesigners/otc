@@ -31,7 +31,8 @@ const base = z.strictObject({
 
 export const orgFrontmatter = base.extend({
   registration: z.strictObject({ type: text, authority: text, date: isoDate, address: text }),
-  trustees: z.array(person),
+  /** OTCF's leadership as listed on /about (chair, co-chairs, trustees, secretary). */
+  leadership: z.array(person),
 });
 
 export const communityFrontmatter = base.extend({

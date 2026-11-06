@@ -1,15 +1,24 @@
 import type { Route } from "./+types/about";
 import { Icon } from "~/components/icons";
 import { DraftBanner, Narrow, PageHero, Prose, Section } from "~/components/Page";
-import { getFaq, getOrg } from "~/content";
+import { getCommunitySummaries, getFaq, getOrg } from "~/content";
 import { pageMeta } from "~/lib/meta";
+import { faqLd, organizationLd } from "~/lib/seo";
 
 export function loader() {
-  return { org: getOrg(), faq: getFaq() };
+  const org = getOrg();
+  const faq = getFaq();
+  return { org, faq, jsonLd: [organizationLd(org, getCommunitySummaries()), faqLd(faq.items)] };
 }
 
 export const meta: Route.MetaFunction = ({ loaderData }) =>
-  pageMeta({ title: "About OTCF", description: loaderData.org.summary, path: "/about" });
+  pageMeta({
+    title: "About OTCF",
+    description: loaderData.org.summary,
+    path: "/about",
+    crumbs: [{ name: "About", path: "/about" }],
+    jsonLd: loaderData.jsonLd,
+  });
 
 export default function About({ loaderData }: Route.ComponentProps) {
   const { org, faq } = loaderData;

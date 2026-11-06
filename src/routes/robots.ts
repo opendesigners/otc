@@ -6,6 +6,7 @@ export function loader() {
   const body = `User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /*.data$
 
 Sitemap: ${siteConfig.url}/sitemap.xml
 `;

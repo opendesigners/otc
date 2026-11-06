@@ -12,7 +12,7 @@ OTCF is a registered Nigerian nonprofit that stands behind three active tech com
 
 ## Who you reach
 
-- **Three communities** — Open Designers, Open Devs and GDG Ilorin, each with its own members, leadership and activities.
+- **Three communities** — Open Designers, its developer community Open Devs, and GDG Ilorin, each with its own members and activities.
 - **GDG Ilorin** — {{gdgIlorinMembers}} members in Ilorin, Kwara State.
 - **DevFest Ilorin** — the largest tech conference in North Central Nigeria, with {{devfestAttendees}} attendees across past editions. The 2026 edition runs 6–7 November at Ilorin Innovation Hub, with around 1,000 expected each day.
 

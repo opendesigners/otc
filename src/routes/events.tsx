@@ -29,6 +29,7 @@ export const meta: Route.MetaFunction = () =>
     title: "Events",
     description: "Conferences, workshops and meetups run by OTCF's communities, including DevFest Ilorin.",
     path: "/events",
+    crumbs: [{ name: "Events", path: "/events" }],
   });
 
 export default function Events({ loaderData }: Route.ComponentProps) {

@@ -16,7 +16,12 @@ export function loader() {
 }
 
 export const meta: Route.MetaFunction = ({ loaderData }) =>
-  pageMeta({ title: loaderData.page.title, description: loaderData.page.summary, path: loaderData.page.route });
+  pageMeta({
+    title: loaderData.page.title,
+    description: loaderData.page.summary,
+    path: loaderData.page.route,
+    crumbs: [{ name: loaderData.page.title, path: loaderData.page.route }],
+  });
 
 export default function Privacy({ loaderData }: Route.ComponentProps) {
   const { page } = loaderData;

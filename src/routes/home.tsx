@@ -24,6 +24,7 @@ import {
 } from "~/content";
 import { eventState, formatDateRange, lagosToday } from "~/lib/dates";
 import { pageMeta } from "~/lib/meta";
+import { organizationLd, websiteLd } from "~/lib/seo";
 
 export const handle: RouteHandle = { ownHeader: true, askBar: false };
 
@@ -39,6 +40,7 @@ export function loader() {
     communities: getCommunitySummaries(),
     backers: getBackers().backers,
     orgSummary: getOrg().summary,
+    jsonLd: [organizationLd(getOrg(), getCommunitySummaries()), websiteLd()],
     privacySummary: getPage("privacy")?.summary,
     partnerSummary: getPartner().summary,
     event: event && {
@@ -53,12 +55,13 @@ export function loader() {
   };
 }
 
-export const meta: Route.MetaFunction = () =>
+export const meta: Route.MetaFunction = ({ loaderData }) =>
   pageMeta({
-    title: `${siteConfig.name} — Nigeria's open tech communities`,
+    title: `${siteConfig.name} (${siteConfig.shortName}) — Nigeria's open tech communities`,
     description:
-      "One front door to Nigeria's open tech communities: Open Designers, Open Devs and GDG Ilorin. Ask a question, get a short answer and the right link.",
+      "One front door to Nigeria's open tech communities: Open Designers, Open Devs and GDG Ilorin, home of DevFest Ilorin. Ask a question, get a short answer and the right link.",
     path: "/",
+    jsonLd: loaderData.jsonLd,
   });
 
 const { facts } = siteConfig;

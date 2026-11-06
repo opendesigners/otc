@@ -25,6 +25,7 @@ export const meta: Route.MetaFunction = () =>
     title: "Contact",
     description: "How to reach Open Tech Communities Foundation and each of its communities.",
     path: "/contact",
+    crumbs: [{ name: "Contact", path: "/contact" }],
   });
 
 const short = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
