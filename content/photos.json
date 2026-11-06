@@ -1,0 +1,91 @@
+{
+  "photos": [
+    {
+      "file": "build-with-ai-2026-group.webp",
+      "alt": "A packed auditorium of Build with AI 2026 attendees cheering together among rows of red seats",
+      "width": 1440,
+      "height": 960,
+      "event": "Build with AI 2026",
+      "hero": true
+    },
+    {
+      "file": "devfest-ilorin-2025-attendees.webp",
+      "alt": "Four DevFest Ilorin 2025 attendees smiling together in front of a black-and-white illustrated mural",
+      "width": 1000,
+      "height": 1000,
+      "event": "DevFest Ilorin 2025",
+      "community": "gdg-ilorin",
+      "feature": true
+    },
+    {
+      "file": "devfest-ilorin-2025-keynote.webp",
+      "alt": "A speaker in white addressing the audience in front of a giant DevFest 2025 screen",
+      "width": 1200,
+      "height": 800,
+      "event": "DevFest Ilorin 2025",
+      "community": "gdg-ilorin"
+    },
+    {
+      "file": "devfest-ilorin-2025-main-hall.webp",
+      "alt": "The DevFest Ilorin 2025 main hall full of attendees facing the stage under chandeliers",
+      "width": 1200,
+      "height": 800,
+      "event": "DevFest Ilorin 2025",
+      "community": "gdg-ilorin"
+    },
+    {
+      "file": "devfest-ilorin-2025-workshop.webp",
+      "alt": "Attendees working on laptops around a workshop table at DevFest Ilorin 2025",
+      "width": 1200,
+      "height": 800,
+      "event": "DevFest Ilorin 2025",
+      "community": "gdg-ilorin"
+    },
+    {
+      "file": "devfest-ilorin-2025-audience.webp",
+      "alt": "Rows of attendees seated close together in the decorated hall at DevFest Ilorin 2025",
+      "width": 1200,
+      "height": 800,
+      "event": "DevFest Ilorin 2025",
+      "community": "gdg-ilorin"
+    },
+    {
+      "file": "devfest-ilorin-2025-laptop.webp",
+      "alt": "An attendee smiling over her laptop during a DevFest Ilorin 2025 session",
+      "width": 1200,
+      "height": 800,
+      "event": "DevFest Ilorin 2025",
+      "community": "gdg-ilorin"
+    },
+    {
+      "file": "build-with-ai-2026-speakers.webp",
+      "alt": "Two speakers presenting together on stage at Build with AI 2026",
+      "width": 1200,
+      "height": 800,
+      "event": "Build with AI 2026"
+    },
+    {
+      "file": "build-with-ai-2026-question.webp",
+      "alt": "An attendee asking a question into a microphone from the red seats at Build with AI 2026",
+      "width": 1200,
+      "height": 800,
+      "event": "Build with AI 2026"
+    },
+    {
+      "file": "io-extended-ilorin-2022-group.webp",
+      "alt": "Hundreds of Google I/O Extended Ilorin 2022 attendees gathered outdoors for a group photo",
+      "width": 1200,
+      "height": 707,
+      "event": "Google I/O Extended Ilorin 2022",
+      "community": "gdg-ilorin"
+    },
+    {
+      "file": "io-extended-ilorin-2022-audience.webp",
+      "alt": "Attendees seated close together during a session at Google I/O Extended Ilorin 2022",
+      "width": 1200,
+      "height": 800,
+      "event": "Google I/O Extended Ilorin 2022",
+      "community": "gdg-ilorin"
+    }
+  ]
+}
