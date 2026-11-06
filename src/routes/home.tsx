@@ -26,7 +26,8 @@ import { eventState, formatDateRange, lagosToday } from "~/lib/dates";
 import { pageMeta } from "~/lib/meta";
 import { organizationLd, websiteLd } from "~/lib/seo";
 
-export const handle: RouteHandle = { ownHeader: true, askBar: false };
+// The floating ask bar docks once the hero prompt scrolls away (.ask-dock in app.css).
+export const handle: RouteHandle = { ownHeader: true, askBar: "dock" };
 
 export function loader() {
   const today = lagosToday();
@@ -76,7 +77,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
   return (
     <>
       <div className="px-2 pt-2 sm:px-4 sm:pt-4">
-        <section className="mx-auto max-w-[90rem] rounded-[var(--radius-panel)] bg-panel pb-8 sm:pb-10">
+        <section className="rounded-[var(--radius-panel)] bg-panel pb-8 sm:pb-10">
           <SiteHeader />
 
           <div className="px-5 pt-8 text-center sm:pt-14">
@@ -96,7 +97,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 
           {/* The prompt overlaps the top edge of the photo panel, as on america.gov. */}
           <div className="relative mx-auto mt-14 max-w-5xl px-2 sm:mt-20 sm:px-8">
-            <div className="enter-pop absolute inset-x-4 top-0 z-10 -translate-y-1/2 sm:inset-x-14" style={{ "--d": 480 } as React.CSSProperties}>
+            <div className="enter-pop hero-prompt absolute inset-x-4 top-0 z-10 -translate-y-1/2 sm:inset-x-14" style={{ "--d": 480 } as React.CSSProperties}>
               <div className="mx-auto max-w-3xl">
                 <Prompt size="large" />
               </div>
