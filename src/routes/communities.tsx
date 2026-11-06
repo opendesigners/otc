@@ -10,7 +10,12 @@ export function loader() {
 }
 
 export const meta: Route.MetaFunction = ({ loaderData }) =>
-  pageMeta({ title: "Communities", description: loaderData.intro, path: "/communities" });
+  pageMeta({
+    title: "Communities",
+    description: loaderData.intro,
+    path: "/communities",
+    crumbs: [{ name: "Communities", path: "/communities" }],
+  });
 
 export default function Communities({ loaderData }: Route.ComponentProps) {
   const { intro, communities } = loaderData;

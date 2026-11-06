@@ -6,6 +6,7 @@ import { ButtonLink, Container, DraftBanner, Facts, Narrow, PageHero, Prose, Sec
 import { getCommunity, getEvent } from "~/content";
 import { eventState, formatDateRange, formatDay } from "~/lib/dates";
 import { pageMeta } from "~/lib/meta";
+import { eventLd } from "~/lib/seo";
 
 export function loader({ params }: Route.LoaderArgs) {
   const event = getEvent(params.slug);
@@ -20,7 +21,16 @@ export function loader({ params }: Route.LoaderArgs) {
 
 export const meta: Route.MetaFunction = ({ loaderData }) =>
   loaderData
-    ? pageMeta({ title: loaderData.event.title, description: loaderData.event.summary, path: loaderData.event.route })
+    ? pageMeta({
+        title: loaderData.event.title,
+        description: loaderData.event.summary,
+        path: loaderData.event.route,
+        crumbs: [
+          { name: "Events", path: "/events" },
+          { name: loaderData.event.title, path: loaderData.event.route },
+        ],
+        jsonLd: [eventLd(loaderData.event, loaderData.organiser)],
+      })
     : [];
 
 export default function Event({ loaderData }: Route.ComponentProps) {

@@ -53,7 +53,7 @@ pnpm content:check
 pnpm build
 ```
 
-Output: static site in `build/client/` — one HTML file per page (`about.html`, `events/devfest-ilorin-2026.html`, …), `404.html`, `sitemap.xml` and `robots.txt`. Set `SITE_URL` and `OTCF_CONTACT_EMAIL` for real builds; the build warns if they're missing.
+Output: static site in `build/client/` — one HTML file per page (`about.html`, `events/devfest-ilorin-2026.html`, …), `404.html`, `sitemap.xml` and `robots.txt`. Set `SITE_URL` and `OTCF_CONTACT_EMAIL` for real builds; the build warns if they're missing, and on Cloudflare Pages it fails without `SITE_URL` (canonicals, sitemap and structured data are built from it). `public/_headers` sets security and cache headers on Pages.
 
 Event pages are date-aware: they read as "upcoming" before an event, "happening now" during it and "recap" after its end date, using a tiny inline script — no rebuild needed when an event ends.
 

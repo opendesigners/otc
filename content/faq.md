@@ -8,7 +8,7 @@ publish: true
 
 ## What is OTCF?
 
-Open Tech Communities Foundation (OTCF) is a Nigerian nonprofit, registered on 7 May 2026, that is the parent body for three independent tech communities: Open Designers, Open Devs and GDG Ilorin. See /about.
+Open Tech Communities Foundation (OTCF) is a Nigerian nonprofit, registered on 7 May 2026, that is the parent body for three tech communities: Open Designers, its developer community Open Devs, and GDG Ilorin. See /about.
 
 ## Is OTCF a merger of the communities?
 
@@ -20,11 +20,11 @@ Yes. OTCF was registered on 7 May 2026 as an Incorporated Trustee under CAC Part
 
 ## Who leads OTCF?
 
-Areous A. Ahmad is the Chairman and founder. Faith Ayomide Odetunde is the Secretary and co-trustee.
+Areous A. Ahmad is the Chairman and founder. Imam Bashir A. and Ahmed Olanrewaju are Co-chairpersons. Faith Ayomide Odetunde is the Secretary and co-trustee.
 
 ## Which communities are part of OTCF?
 
-Three: Open Designers (an open-source design initiative and community), Open Devs (a developer community) and GDG Ilorin (the Google Developer Group chapter in Ilorin). See /communities.
+Three: Open Designers (an open-source design and dev community), Open Devs (Open Designers' developer community) and GDG Ilorin (the Google Developer Group chapter in Ilorin). See /communities.
 
 ## Where is GDG Ilorin based?
 
@@ -33,6 +33,10 @@ In Ilorin, Kwara State, Nigeria. GDG Ilorin has {{gdgIlorinMembers}} members. Se
 ## How do I join GDG Ilorin?
 
 Join on the GDG community platform at https://gdg.community.dev/gdg-ilorin/.
+
+## How do I join Open Designers or Open Devs?
+
+Join the Open Designers crew on Discord at https://discord.gg/ZWSCxZcA — Open Devs, its developer community, uses the same Discord. See /communities/open-designers and /communities/open-devs.
 
 ## How do I contact GDG Ilorin?
 

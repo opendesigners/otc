@@ -7,6 +7,7 @@ import { ButtonLink, Container, DraftBanner, Facts, Narrow, PageHero, Prose, Sec
 import { getCommunity, getEvents, getGalleryPhotos, isTodo } from "~/content";
 import { eventState, formatDateRange } from "~/lib/dates";
 import { pageMeta } from "~/lib/meta";
+import { communityLd } from "~/lib/seo";
 
 export function loader({ params }: Route.LoaderArgs) {
   const community = getCommunity(params.slug);
@@ -23,6 +24,11 @@ export const meta: Route.MetaFunction = ({ loaderData }) =>
         title: loaderData.community.title,
         description: loaderData.community.summary,
         path: loaderData.community.route,
+        crumbs: [
+          { name: "Communities", path: "/communities" },
+          { name: loaderData.community.title, path: loaderData.community.route },
+        ],
+        jsonLd: [communityLd(loaderData.community)],
       })
     : [];
 
@@ -45,7 +51,7 @@ export default function Community({ loaderData }: Route.ComponentProps) {
       <Prose html={community.html} />
 
       {community.leads.length > 0 && (
-        <Section title="Who leads it">
+        <Section title="The team">
           <Container>
             <ul className="mx-auto grid max-w-4xl gap-3 sm:grid-cols-[repeat(auto-fit,minmax(13rem,1fr))]">
               {community.leads.map((p) => (
