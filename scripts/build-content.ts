@@ -22,8 +22,9 @@ import data from "./content.json";
 export const bundle = data as ContentBundle;
 `;
 
-// The order the brief introduces them in; anything new goes after.
-const COMMUNITY_ORDER = ["open-designers", "open-devs", "gdg-ilorin"];
+// Display order everywhere communities are listed (GDG Ilorin first, at the
+// user's request, 2026-11-07); anything new goes after.
+const COMMUNITY_ORDER = ["gdg-ilorin", "open-designers", "open-devs"];
 
 export function buildContent({ drafts }: { drafts: boolean }): ContentBundle {
   const all = loadAllContent();

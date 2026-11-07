@@ -130,7 +130,7 @@ export function DraftBanner({ show }: { show: boolean }) {
   return (
     <Narrow className="mb-10">
       <p className="rounded-full border border-dashed border-accent px-4 py-2 text-center text-sm text-accent">
-        Draft — visible in development only. Publish once every TODO is filled.
+        Draft: visible in development only. Publish once every TODO is filled.
       </p>
     </Narrow>
   );

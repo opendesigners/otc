@@ -4,7 +4,7 @@
 import { siteConfig } from "~/config";
 import { getContent } from "~/content";
 
-const STATIC_ROUTES = ["/", "/about", "/communities", "/events", "/partner", "/contact"];
+const STATIC_ROUTES = ["/", "/about", "/communities", "/projects", "/impact", "/events", "/partner", "/contact"];
 
 export function loader() {
   const docs = getContent().filter((d) => !d.route.includes("#") && !STATIC_ROUTES.includes(d.route));

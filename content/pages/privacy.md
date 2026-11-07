@@ -15,7 +15,7 @@ publish: true
 
 ## When you ask a question
 
-When you type a question into the box on the home page, it is sent to our server and then to Anthropic, the AI provider that writes the answer. OTCF does not store your question or the answer. Our server logs record only that a request happened, whether it worked and how long it took — never what you asked.
+When you type a question into the box on the home page, it is sent to our server and then to Anthropic, the AI provider that writes the answer. OTCF does not store your question or the answer. Our server logs record only that a request happened, whether it worked and how long it took. They never record what you asked.
 
 Anthropic processes the text of your question under its own data policies. Please don't include personal information, such as your phone number, in a question.
 

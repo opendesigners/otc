@@ -43,11 +43,11 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export const meta: Route.MetaFunction = () => [
-  { title: `${siteConfig.name} — Nigeria's open tech communities` },
+  { title: `${siteConfig.name} · Nigeria's open tech communities` },
   {
     name: "description",
     content:
-      "One front door to Nigeria's open tech communities: Open Designers, Open Devs and GDG Ilorin. Ask a question, get a short answer and the right link.",
+      "One front door to Nigeria's open tech communities: GDG Ilorin, Open Designers and Open Devs. Ask a question, get a short answer and the right link.",
   },
 ];
 

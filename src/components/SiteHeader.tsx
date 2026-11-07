@@ -5,7 +5,7 @@ export const MENU_ID = "site-menu";
 
 export function Logo() {
   return (
-    <a href="/" className="flex items-center gap-2.5" aria-label={`${siteConfig.name} — home`}>
+    <a href="/" className="flex items-center gap-2.5" aria-label={`${siteConfig.name} home`}>
       <Mark size={30} className="size-[1.875rem]" />
       <span className="font-serif text-[1.625rem] leading-none tracking-[-0.035em]">
         <span className="sm:hidden">{siteConfig.shortName}</span>

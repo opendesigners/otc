@@ -5,9 +5,14 @@ import { Marked } from "marked";
 
 const marked = new Marked({ gfm: true, async: false });
 
+/** First path segment of every site route. Add new top-level routes here. */
+export const SITE_SECTIONS = "about|ask|communities|projects|impact|events|partner|privacy|contact";
+
 /** Site routes as written in prose, e.g. "See /about." or "(/events/devfest-ilorin-2026)". */
-const SITE_ROUTE =
-  /(^|[\s(])(\/(?:about|ask|communities|events|partner|privacy|contact)(?:\/[a-z0-9-]+)*(?:#[a-z0-9-]+)?)(?=$|[\s.,;:!?)])/g;
+const SITE_ROUTE = new RegExp(
+  `(^|[\\s(])(\\/(?:${SITE_SECTIONS})(?:\\/[a-z0-9-]+)*(?:#[a-z0-9-]+)?)(?=$|[\\s.,;:!?)])`,
+  "g",
+);
 
 // Turn bare site routes in text into links, leaving existing links alone.
 function linkSiteRoutes(html: string): string {

@@ -7,6 +7,8 @@ export default [
   route("about", "routes/about.tsx"),
   route("communities", "routes/communities.tsx"),
   route("communities/:slug", "routes/community.tsx"),
+  route("projects", "routes/projects.tsx"),
+  route("impact", "routes/impact.tsx"),
   route("events", "routes/events.tsx"),
   route("events/:slug", "routes/event.tsx"),
   route("partner", "routes/partner.tsx"),

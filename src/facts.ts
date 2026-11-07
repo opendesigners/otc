@@ -10,6 +10,14 @@ export const facts = {
   gdgIlorinMembers: "4,600+",
   /** Total across past DevFest Ilorin editions. */
   devfestAttendees: "2,500+",
+  /** Open Designers community members (supplied by the user, 2026-11-07). */
+  openDesignersMembers: "2,000+",
+  /**
+   * Sum of the "users" counts on Open Designers' six Figma Community files
+   * (figma.com/@opendesigners, 2026-11-07: 44.9k + 7.4k + 2.6k + 1.4k + 934 + 151),
+   * rounded down. Per-file numbers are in content/projects.md.
+   */
+  figmaFileUses: "57,000+",
 } as const;
 
 export type FactKey = keyof typeof facts;

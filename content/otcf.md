@@ -1,8 +1,8 @@
 ---
 title: Open Tech Communities Foundation
 slug: otcf
-summary: OTCF is a Nigerian nonprofit, registered in May 2026, that gives three tech communities — Open Designers, its developer community Open Devs, and GDG Ilorin — a shared legal and institutional home.
-updated: 2026-11-04
+summary: OTCF is a Nigerian nonprofit, registered in May 2026, that gives three tech communities (GDG Ilorin, Open Designers and its developer community Open Devs) a shared legal and institutional home.
+updated: 2026-11-07
 publish: true
 registration:
   type: Incorporated Trustee
@@ -26,22 +26,22 @@ Open Tech Communities Foundation (OTCF) is a Nigerian nonprofit registered on 7 
 
 OTCF is the registered parent body for three tech communities:
 
-- **Open Designers** — an open-source design and dev community.
-- **Open Devs** — Open Designers' developer community.
-- **GDG Ilorin** — the Google Developer Group chapter in Ilorin, with {{gdgIlorinMembers}} members, and the organiser of DevFest Ilorin.
+- **GDG Ilorin**: the Google Developer Group chapter in Ilorin, with {{gdgIlorinMembers}} members, and the organiser of DevFest Ilorin.
+- **Open Designers**: an open-source design and dev community with {{openDesignersMembers}} members.
+- **Open Devs**: Open Designers' developer community.
 
 ## How the structure works
 
 OTCF is to its communities what Alphabet is to Google. Each community keeps its own identity, its own leadership and its own activities. OTCF provides what a volunteer community cannot easily provide for itself: legal recognition, organisational backing, and a shared institutional home that helps the communities grow and last.
 
-This is not a merger. Nobody joins "OTCF" instead of a community — you join the community you care about, and OTCF stands behind all of them.
+This is not a merger. Nobody joins "OTCF" instead of a community. You join the community you care about, and OTCF stands behind all of them.
 
 ## Who runs OTCF
 
-- **Areous A. Ahmad** — Chairman and founder. A product designer and community builder with more than seven years of community work. Areous is also the Lead Organizer of GDG Ilorin and the founder of Open Designers.
-- **Imam Bashir A.** — Co-chairperson.
-- **Ahmed Olanrewaju** — Co-chairperson.
-- **Faith Ayomide Odetunde** — Secretary and co-trustee.
+- **Areous A. Ahmad**: Chairman and founder. A product designer and community builder with more than seven years of community work. Areous is also the Lead Organizer of GDG Ilorin and the founder of Open Designers.
+- **Imam Bashir A.**: Co-chairperson.
+- **Ahmed Olanrewaju**: Co-chairperson.
+- **Faith Ayomide Odetunde**: Secretary and co-trustee.
 
 ## Registration details
 
