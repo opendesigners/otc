@@ -73,6 +73,31 @@ export const eventFrontmatter = base
 
 export const plainFrontmatter = base;
 
+/** content/projects.md → /projects. Things the communities have built and shared. */
+export const projectsFrontmatter = base.extend({
+  projects: z.array(
+    z.strictObject({
+      name: text,
+      /** Slug of the community behind it; the page groups projects by community. */
+      community: text,
+      /** Short label, e.g. "Figma file", "Open-source app". */
+      type: text,
+      summary: text,
+      url: z.url(),
+      /** Public numbers from the source, quoted as shown there (e.g. "44.9k users"). */
+      stats: text.optional(),
+      /** Who made it, as credited at the source. */
+      credit: text.optional(),
+      license: text.optional(),
+    }),
+  ),
+});
+
+/** content/impact.md → /impact. Headline numbers (use {{facts}}) plus prose. */
+export const impactFrontmatter = base.extend({
+  stats: z.array(z.strictObject({ value: text, label: text })),
+});
+
 type DocMeta = {
   /** Site route this file renders at; also what the assistant cites. */
   route: string;
@@ -103,10 +128,13 @@ export type EventDoc = z.infer<typeof eventFrontmatter> &
   };
 export type FaqDoc = z.infer<typeof plainFrontmatter> & DocMeta & { kind: "faq"; items: FaqItem[] };
 export type PartnerDoc = z.infer<typeof plainFrontmatter> & DocMeta & { kind: "partner" };
+export type ProjectsDoc = z.infer<typeof projectsFrontmatter> & DocMeta & { kind: "projects" };
+export type Project = ProjectsDoc["projects"][number];
+export type ImpactDoc = z.infer<typeof impactFrontmatter> & DocMeta & { kind: "impact" };
 /** A standalone prose page at /<slug>, e.g. content/pages/privacy.md → /privacy. */
 export type PageDoc = z.infer<typeof plainFrontmatter> & DocMeta & { kind: "page" };
 
-export type ContentDoc = OrgDoc | CommunityDoc | EventDoc | FaqDoc | PartnerDoc | PageDoc;
+export type ContentDoc = OrgDoc | CommunityDoc | EventDoc | FaqDoc | PartnerDoc | ProjectsDoc | ImpactDoc | PageDoc;
 export type ContentKind = ContentDoc["kind"];
 
 /**

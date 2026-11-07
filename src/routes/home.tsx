@@ -58,9 +58,9 @@ export function loader() {
 
 export const meta: Route.MetaFunction = ({ loaderData }) =>
   pageMeta({
-    title: `${siteConfig.name} (${siteConfig.shortName}) — Nigeria's open tech communities`,
+    title: `${siteConfig.name} (${siteConfig.shortName}) · Nigeria's open tech communities`,
     description:
-      "One front door to Nigeria's open tech communities: Open Designers, Open Devs and GDG Ilorin, home of DevFest Ilorin. Ask a question, get a short answer and the right link.",
+      "One front door to Nigeria's open tech communities: GDG Ilorin, home of DevFest Ilorin, Open Designers and Open Devs. Ask a question, get a short answer and the right link.",
     path: "/",
     jsonLd: loaderData.jsonLd,
   });
@@ -142,7 +142,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                   <div className="px-3 pb-8 sm:pb-14">
                     {showPhotoSlot && (
                       <p className="mx-auto w-fit rounded-full border border-dashed border-brand-ink/60 px-4 py-1.5 text-xs text-brand-ink">
-                        Photo slot — list images in content/photos.json (files in public/photos/)
+                        Photo slot: list images in content/photos.json (files in public/photos/)
                       </p>
                     )}
                   </div>
@@ -177,8 +177,10 @@ export default function Home({ loaderData }: Route.ComponentProps) {
           </ul>
 
           <p className="enter mt-8 px-5 text-center text-sm text-muted sm:mt-10" style={{ "--d": 1000 } as React.CSSProperties}>
-            {facts.communityCount} communities · {facts.gdgIlorinMembers} GDG Ilorin members · {facts.devfestAttendees}{" "}
-            DevFest attendees
+            <a href="/impact" className="decoration-1 underline-offset-4 hover:text-ink hover:underline">
+              {facts.communityCount} communities · {facts.gdgIlorinMembers} GDG Ilorin members · {facts.openDesignersMembers}{" "}
+              Open Designers members · {facts.devfestAttendees} DevFest attendees
+            </a>
           </p>
         </section>
       </div>

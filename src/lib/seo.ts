@@ -3,7 +3,7 @@
 // restate facts from /content — never add claims the pages don't make.
 
 import { siteConfig } from "~/config";
-import type { CommunityDoc, CommunitySummary, EventDoc, FaqItem, OrgDoc } from "~/content";
+import type { CommunityDoc, CommunitySummary, EventDoc, FaqItem, OrgDoc, Project } from "~/content";
 
 const abs = (path: string) => `${siteConfig.url}${path === "/" ? "" : path}`;
 const ORG_ID = `${siteConfig.url}/#organization`;
@@ -109,6 +109,30 @@ export function faqLd(items: FaqItem[]) {
       "@type": "Question",
       name: i.question,
       acceptedAnswer: { "@type": "Answer", text: i.answer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1 ($2)") },
+    })),
+  };
+}
+
+const LICENSES: Record<string, string> = { "CC BY 4.0": "https://creativecommons.org/licenses/by/4.0/" };
+
+/** /projects: each project as a CreativeWork made by its community. */
+export function projectsLd(projects: Project[], communities: CommunitySummary[]) {
+  const name = (slug: string) => communities.find((c) => c.slug === slug)?.title ?? slug;
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Projects by OTCF's communities",
+    itemListElement: projects.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "CreativeWork",
+        name: p.name,
+        description: p.summary,
+        url: p.url,
+        creator: { "@type": "Organization", name: name(p.community) },
+        ...(p.license && LICENSES[p.license] ? { license: LICENSES[p.license] } : {}),
+      },
     })),
   };
 }

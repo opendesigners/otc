@@ -1,8 +1,8 @@
 ---
 title: Partner with OTCF
 slug: partner
-summary: Sponsors and partners can reach Nigeria's open tech communities through OTCF — three communities, {{gdgIlorinMembers}} GDG Ilorin members, and DevFest Ilorin, the largest tech conference in North Central Nigeria.
-updated: 2026-11-04
+summary: "Sponsors and partners can reach Nigeria's open tech communities through OTCF: three communities, {{gdgIlorinMembers}} GDG Ilorin members, and DevFest Ilorin, the largest tech conference in North Central Nigeria."
+updated: 2026-11-07
 publish: true
 ---
 
@@ -12,9 +12,10 @@ OTCF is a registered Nigerian nonprofit that stands behind three active tech com
 
 ## Who you reach
 
-- **Three communities** — Open Designers, its developer community Open Devs, and GDG Ilorin, each with its own members and activities.
-- **GDG Ilorin** — {{gdgIlorinMembers}} members in Ilorin, Kwara State.
-- **DevFest Ilorin** — the largest tech conference in North Central Nigeria, with {{devfestAttendees}} attendees across past editions. The 2026 edition runs 6–7 November at Ilorin Innovation Hub, with around 1,000 expected each day.
+- **Three communities**: GDG Ilorin, Open Designers and its developer community Open Devs, each with its own members and activities.
+- **GDG Ilorin**: {{gdgIlorinMembers}} members in Ilorin, Kwara State.
+- **Open Designers**: {{openDesignersMembers}} designers and developers, whose free Figma files have been used {{figmaFileUses}} times. See /projects.
+- **DevFest Ilorin**: the largest tech conference in North Central Nigeria, with {{devfestAttendees}} attendees across past editions. The 2026 edition runs 6–7 November at Ilorin Innovation Hub, with around 1,000 expected each day.
 
 ## Ways to work together
 

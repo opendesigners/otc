@@ -7,7 +7,7 @@
 // ships to the browser.
 
 import { bundle } from "../generated/content";
-import type { CommunityDoc, ContentDoc, EventDoc, FaqDoc, OrgDoc, PageDoc, PartnerDoc } from "./schema";
+import type { CommunityDoc, ContentDoc, EventDoc, FaqDoc, ImpactDoc, OrgDoc, PageDoc, PartnerDoc, ProjectsDoc } from "./schema";
 import { SPONSOR_TIERS } from "./tiers";
 
 export type * from "./schema";
@@ -58,9 +58,14 @@ function required<T>(doc: T | undefined, what: string): T {
 export const getOrg = (): OrgDoc => required(only("org")[0], "content/otcf.md");
 export const getFaq = (): FaqDoc => required(only("faq")[0], "content/faq.md");
 export const getPartner = (): PartnerDoc => required(only("partner")[0], "content/partner.md");
+export const getProjects = (): ProjectsDoc => required(only("projects")[0], "content/projects.md");
+export const getImpact = (): ImpactDoc => required(only("impact")[0], "content/impact.md");
 export const getPage = (slug: string): PageDoc | undefined => only("page").find((doc) => doc.slug === slug);
 
-export const getCommunities = (): CommunityDoc[] => only("community");
+/** In display order (COMMUNITY_ORDER in scripts/build-content.ts — GDG Ilorin first). */
+const communityRank = (slug: string) => bundle.communities.findIndex((c) => c.slug === slug);
+export const getCommunities = (): CommunityDoc[] =>
+  only("community").sort((a, b) => communityRank(a.slug) - communityRank(b.slug));
 export const getCommunity = (slug: string): CommunityDoc | undefined =>
   getCommunities().find((doc) => doc.slug === slug);
 

@@ -9,6 +9,8 @@ export const SITE_LINKS = [
   { href: "/", label: "Ask a question" },
   { href: "/about", label: "About" },
   { href: "/communities", label: "Communities" },
+  { href: "/projects", label: "Projects" },
+  { href: "/impact", label: "Impact" },
   { href: "/events", label: "Events" },
   { href: "/partner", label: "Partner with us" },
   { href: "/contact", label: "Contact" },

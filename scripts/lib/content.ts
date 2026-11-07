@@ -10,18 +10,20 @@ import {
   TODO,
   communityFrontmatter,
   eventFrontmatter,
+  impactFrontmatter,
   orgFrontmatter,
   photosFile,
   plainFrontmatter,
+  projectsFrontmatter,
   type ContentDoc,
   type FaqItem,
   type Photo,
 } from "../../src/content/schema.ts";
-import { renderMarkdown, slugify } from "./markdown.ts";
+import { SITE_SECTIONS, renderMarkdown, slugify } from "./markdown.ts";
 
 // A site route anywhere in a doc (prose, frontmatter or rendered links). The
 // lookbehind skips paths inside external URLs like gdg.community.dev/events/….
-const ROUTE_MENTION = /(?<![\w./])\/(?:about|ask|communities|events|partner|privacy|contact)(?:\/[a-z0-9-]+)*/g;
+const ROUTE_MENTION = new RegExp(`(?<![\\w./])\\/(?:${SITE_SECTIONS})(?:\\/[a-z0-9-]+)*`, "g");
 
 export const CONTENT_DIR = path.resolve(import.meta.dirname, "../../content");
 
@@ -103,6 +105,16 @@ export function parseContentFile(file: string, raw: string): ContentDoc {
   }
   if (file === "partner.md") {
     return { ...validate(file, plainFrontmatter, data), ...meta, kind: "partner", route: "/partner" };
+  }
+  if (file === "projects.md") {
+    const fm = validate(file, projectsFrontmatter, data);
+    const communities = new Set(listMarkdown(path.join(CONTENT_DIR, "communities")).map((f) => path.basename(f, ".md")));
+    const unknown = fm.projects.find((p) => !communities.has(p.community));
+    if (unknown) throw new ContentError(file, `project "${unknown.name}": unknown community "${unknown.community}"`);
+    return { ...fm, ...meta, kind: "projects", route: "/projects" };
+  }
+  if (file === "impact.md") {
+    return { ...validate(file, impactFrontmatter, data), ...meta, kind: "impact", route: "/impact" };
   }
   if (file.startsWith("pages/")) {
     const fm = validate(file, plainFrontmatter, data);

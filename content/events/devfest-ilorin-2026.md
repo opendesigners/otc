@@ -1,7 +1,7 @@
 ---
 title: DevFest Ilorin 2026
 slug: devfest-ilorin-2026
-summary: DevFest Ilorin 2026 runs 6–7 November 2026 at Ilorin Innovation Hub — a day of workshops on Friday, then the main conference on Saturday. Organised by GDG Ilorin.
+summary: "DevFest Ilorin 2026 runs 6–7 November 2026 at Ilorin Innovation Hub: a day of workshops on Friday, then the main conference on Saturday. Organised by GDG Ilorin."
 updated: 2026-11-04
 publish: true
 community: gdg-ilorin
@@ -15,7 +15,7 @@ registrationUrl: https://gdg.community.dev/events/details/google-gdg-ilorin-pres
 schedule:
   - date: 2026-11-06
     title: Workshops
-    detail: Hands-on workshops across three halls — the Balogun Ajikobi, Balogun Gambari and Balogun Fulani rooms.
+    detail: "Hands-on workshops across three halls: the Balogun Ajikobi, Balogun Gambari and Balogun Fulani rooms."
   - date: 2026-11-07
     title: Conference
     detail: The main DevFest Ilorin conference day.

@@ -1,7 +1,7 @@
 ---
 title: GDG Ilorin
 slug: gdg-ilorin
-summary: GDG Ilorin is the Google Developer Group chapter in Ilorin, Kwara State — {{gdgIlorinMembers}} members, and the organiser of DevFest Ilorin, the largest tech conference in North Central Nigeria.
+summary: GDG Ilorin is the Google Developer Group chapter in Ilorin, Kwara State, with {{gdgIlorinMembers}} members. It organises DevFest Ilorin, the largest tech conference in North Central Nigeria.
 tagline: The Google Developer Group in Ilorin, and the team behind DevFest Ilorin.
 updated: 2026-11-04
 publish: true
@@ -33,7 +33,7 @@ Join GDG Ilorin on the GDG community platform at https://gdg.community.dev/gdg-i
 
 ## DevFest Ilorin
 
-GDG Ilorin runs DevFest Ilorin, the largest tech conference in North Central Nigeria, with {{devfestAttendees}} attendees across past editions. The 2026 edition takes place on 6–7 November 2026 at Ilorin Innovation Hub — see /events/devfest-ilorin-2026.
+GDG Ilorin runs DevFest Ilorin, the largest tech conference in North Central Nigeria, with {{devfestAttendees}} attendees across past editions. The 2026 edition takes place on 6–7 November 2026 at Ilorin Innovation Hub. See /events/devfest-ilorin-2026.
 
 ## Talk recordings
 

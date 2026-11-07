@@ -2,13 +2,13 @@
 title: Frequently asked questions
 slug: faq
 summary: Short answers to common questions about OTCF, its three communities and DevFest Ilorin.
-updated: 2026-11-04
+updated: 2026-11-07
 publish: true
 ---
 
 ## What is OTCF?
 
-Open Tech Communities Foundation (OTCF) is a Nigerian nonprofit, registered on 7 May 2026, that is the parent body for three tech communities: Open Designers, its developer community Open Devs, and GDG Ilorin. See /about.
+Open Tech Communities Foundation (OTCF) is a Nigerian nonprofit, registered on 7 May 2026, that is the parent body for three tech communities: GDG Ilorin, Open Designers and its developer community Open Devs. See /about.
 
 ## Is OTCF a merger of the communities?
 
@@ -24,7 +24,7 @@ Areous A. Ahmad is the Chairman and founder. Imam Bashir A. and Ahmed Olanrewaju
 
 ## Which communities are part of OTCF?
 
-Three: Open Designers (an open-source design and dev community), Open Devs (Open Designers' developer community) and GDG Ilorin (the Google Developer Group chapter in Ilorin). See /communities.
+Three: GDG Ilorin (the Google Developer Group chapter in Ilorin), Open Designers (an open-source design and dev community) and Open Devs (Open Designers' developer community). See /communities.
 
 ## Where is GDG Ilorin based?
 
@@ -36,7 +36,15 @@ Join on the GDG community platform at https://gdg.community.dev/gdg-ilorin/.
 
 ## How do I join Open Designers or Open Devs?
 
-Join the Open Designers crew on Discord at https://discord.gg/ZWSCxZcA — Open Devs, its developer community, uses the same Discord. See /communities/open-designers and /communities/open-devs.
+Join the Open Designers crew on Discord at https://discord.gg/ZWSCxZcA. Open Devs, its developer community, uses the same Discord. See /communities/open-designers and /communities/open-devs.
+
+## What have OTCF's communities built?
+
+Open Designers has published six free design files on the Figma Community, used {{figmaFileUses}} times, including Headers and Footers and an open-source mobile UI kit. It also built PixelScout, an open-source collection of real app UI screens. GDG Ilorin open-sourced the full design kit from DevFest Ilorin 2025. See /projects.
+
+## What impact have OTCF's communities had?
+
+GDG Ilorin has {{gdgIlorinMembers}} members, Open Designers has {{openDesignersMembers}}, and DevFest Ilorin has welcomed {{devfestAttendees}} attendees across past editions. See /impact.
 
 ## How do I contact GDG Ilorin?
 
@@ -64,7 +72,7 @@ Talk recordings are published on the GDG Ilorin YouTube channel.
 
 ## How do I sponsor an event or partner with OTCF?
 
-Email OTCF — see /partner. For DevFest Ilorin specifically, you can also email GDG Ilorin at gdgilorincmty@gmail.com.
+Email OTCF. See /partner. For DevFest Ilorin specifically, you can also email GDG Ilorin at gdgilorincmty@gmail.com.
 
 ## Does this website track me?
 

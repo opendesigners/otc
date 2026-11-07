@@ -1,6 +1,6 @@
 # Open Tech Communities Foundation — website
 
-The official site for Open Tech Communities Foundation (OTCF), the registered parent body for Open Designers, Open Devs and GDG Ilorin.
+The official site for Open Tech Communities Foundation (OTCF), the registered parent body for GDG Ilorin, Open Designers and Open Devs.
 
 The homepage is a single prompt box: ask a question in plain language, get a short answer grounded in this repo's `/content`, plus the link to go next. No login, no tracking, no conversation storage. The site works fully without an AI key — the assistant falls back to keyword search.
 
